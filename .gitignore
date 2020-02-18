@@ -1,0 +1,16 @@
+/target/
+mqjms.log.*
+/.metadata/
+.project
+.classpath
+.settings/
+target/
+build/
+out/
+lib/
+/bin/
+/.idea/
+*.iml
+.gradle
+debug.log
+
