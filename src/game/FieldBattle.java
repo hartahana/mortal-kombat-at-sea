@@ -47,7 +47,7 @@ public class FieldBattle {
         for (int x = 0; x < sizeField; x++)
                    {
                        if (x == 0; y==0) {
-                           System.out.print("a ");
+                           System.out.print("a b");
                        }
                     {
                         System.out.print(field[x][0]);
