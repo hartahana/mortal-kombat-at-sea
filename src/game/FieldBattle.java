@@ -7,7 +7,6 @@ public class FieldBattle {
     public Object printCoord;
     private String[][] field;
     private int sizeField = 10;
-    char[] m = {'a','b','c','d','e','f','g','h','i','j'};
     private int setCoord = 11;
 
     public FieldBattle() {
@@ -41,22 +40,32 @@ public class FieldBattle {
     }
 
     public void printField() {
-        for (int y = 0; y < sizeField; y++) {
 
+        char[] m = new char[10];
+        for (int i = 0; i < 10; )
 
-        for (int x = 0; x < sizeField; x++)
-                   {
-                       if (x == 0; y==0) {
-                           System.out.print("a b");
-                       }
+            for (int x = 0; x < sizeField; x++) {
+
+            {
+                m[i] = (char) ('a' + i);
+
+                for (int y = 0; y < sizeField; y++) {
+                    if (y == 0) {
+                        System.out.print(m[i] + " " + field[x][y]);
+                        i++;
+                    }
+
+                    else
                     {
-                        System.out.print(field[x][0]);
-
+                        System.out.print(field[x][y]);
                     }
 
                 }
+                System.out.print("\n");
+            }
+            System.out.print("");
+        }
 
-                System.out.println("");
-        }
-        }
+
     }
+}
