@@ -27,6 +27,7 @@ public class Menu {
         FieldBattle fieldBattle = new FieldBattle();
         sayHello();
         System.out.println("Place of battle:");
+        fieldBattle.printCoord();
         fieldBattle.printField();
         System.out.println(EXIT);
         System.out.println(ENTER_COMMAND);
