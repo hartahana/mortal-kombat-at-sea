@@ -4,10 +4,8 @@ package game;
  * Игровое поле.
  */
 public class FieldBattle {
-    public Object printCoord;
     private String[][] field;
     private int sizeField = 10;
-    private int setCoord = 11;
 
     public FieldBattle() {
         field = new String[sizeField][sizeField];
@@ -30,34 +28,40 @@ public class FieldBattle {
     /**
      * Вывод поля в консоль.
      */
-    public void printCoord() {
-        System.out.print("  ");
-
-        for (int z = 1; z < 11; z++) {
-            System.out.print(z + " ");
-        }
-        System.out.print("\n");
-    }
 
     public void printField() {
+//рисуем верх с цифрами
+        for (int x = 0; x < 11; x++) {
+            if (x == 0)
+            {
+                System.out.print("  ");
+            }
+            else {
+                System.out.print(x + " ");
+            }
 
+        }
+
+        System.out.print("\n");
+//рисуем вертикаль с буквами
         char[] m = new char[10];
         for (int i = 0; i < 10; )
-
+//для х от 0 до 10
             for (int x = 0; x < sizeField; x++) {
 
+//это нужно для того, чтобы получилась буква, а не нечитаемый символ, но почему - разобраться
             {
                 m[i] = (char) ('a' + i);
-
+//для у от 0 до 10
                 for (int y = 0; y < sizeField; y++) {
                     if (y == 0) {
-                        System.out.print(m[i] + " " + field[x][y]);
+                        System.out.print(m[i] + " " + field[x][y]); //если у == 0 ставим букву
                         i++;
                     }
 
                     else
                     {
-                        System.out.print(field[x][y]);
+                        System.out.print(field[x][y]); //иначе рисуем волну
                     }
 
                 }
