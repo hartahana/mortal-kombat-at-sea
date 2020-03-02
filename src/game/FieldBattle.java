@@ -3,7 +3,7 @@ package game;
 import java.util.Random;
 
 /**
- * Игровое поле.
+ * Игровое поле
  */
 public class FieldBattle {
     private String[][] field;
