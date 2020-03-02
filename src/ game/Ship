@@ -2,19 +2,29 @@ package game;
 
 import java.util.Random;
 
-public Ship(int x, int y, int size, String ShipClass) {
-    this.x = x; //начальные координаты отсчета
-    this.y = y;
-    this.size = size;
-    this ShipClass = ShipClass;
+public class Ship{
+    int x;
+    int y;
+    int size;
+    String ShipClass;
+    boolean FreeField;
+
+    public Ship(int x, int y, int size, String ShipClass){
+        this.x = x; //начальные координаты отсчета
+        this.y = y;
+        this.size = size;
+        this.ShipClass = ShipClass;
+        }
 
     //определить начальные координаты отсчета
     public void GetShip(int x, int y) {
         Random rand = new Random();
         x = rand.nextInt(10);
         y = rand.nextInt(10);
-        ShipClass =
     }
+
+    //Проверяем, пустое ли поле рядом с кораблем
+    public FreeField()
 
 
 
