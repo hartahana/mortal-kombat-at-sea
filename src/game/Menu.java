@@ -25,9 +25,9 @@ public class Menu {
      */
     public void menuGame() {
         FieldBattle fieldBattle = new FieldBattle();
+        Ship GetShip;
         sayHello();
         System.out.println("Place of battle:");
-        fieldBattle.printCoord();
         fieldBattle.printField();
         System.out.println(EXIT);
         System.out.println(ENTER_COMMAND);
