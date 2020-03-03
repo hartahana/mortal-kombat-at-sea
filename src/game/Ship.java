@@ -15,10 +15,24 @@ public class Ship {
 
     //Задается размер корабля
     public Ship(int sizeS) {
-
         setSizeShip(sizeS);
-
     }
+
+    public void setSizeShip(int sS) {
+
+        sizeShip = sS;
+
+        SCells = new String[sizeShip];
+
+        destroyCells = new boolean[sizeShip];
+
+        for (int i = 0; i < sizeShip; i++) {
+
+            locationCells[i] = " "; // расположение корабля не определено
+
+            destroyCells[i] = false; // все клетки корабля целы
+
+        }
 
 
     //определить начальные координаты отсчета
@@ -29,20 +43,22 @@ public class Ship {
     }
 
     //Проверяем, пустое ли поле рядом с кораблем
-    public FreeField()
 
 
     public class Linkor extends Ship {
-        public Linkor(int x, int y, int size, String ShipClass) {
-            super(x, y, size, ShipClass);
+
+        public Linkor(int sizeS) {
+            super(sizeS);
         }
+    }
 
 
     }
 
     public class Submarine extends Ship {
-        public Submarine(int x, int y, int size, String ShipClass) {
-            super(x, y, size, ShipClass);
+
+        public Submarine(int sizeS) {
+            super(sizeS);
         }
     }
 }
