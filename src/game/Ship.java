@@ -1,6 +1,7 @@
 package game;
 //package game;
 
+
 /**
 
  * Базовый класс "Корабль"
@@ -53,8 +54,8 @@ public class Ship {
 
      */
 
-    public void setSizeShip(int sS) {
-
+    public void setSizeShip(int sS) throws NullPointerException {
+    try {
         sizeShip = sS;
 
         locationCells = new String[sizeShip];
@@ -67,8 +68,25 @@ public class Ship {
 
             destroyCells[i] = false; // все клетки корабля целы
 
+                                         }
         }
+        catch (NullPointerException locationCells) {
+        System.out.println("Ошибка! Корабль должен иметь больше 0 клеток!");
+                                                    }
 
+
+    }
+
+    class RedLinkor extends Ship {
+        public RedLinkor (int sizeS) {
+            super(sizeS);
+           }
+    }
+
+    class YellowSubmarine extends Ship {
+        public YellowSubmarine(int sizeS) {
+            super(sizeS);
+        }
     }
 
     /**
